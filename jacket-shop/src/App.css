@@ -1,0 +1,532 @@
+/* Основной контейнер на всю ширину */
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Шапка */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  z-index: 100;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.header .logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.header nav a:hover {
+  color: #f0a500;
+}
+
+/* Параллакс Эффект */
+.parallax-hero {
+  width: 100%;
+  background-image: url('https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?auto=format&fit=crop&q=80&w=1920');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-top: 0;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 3rem;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+/* --- СЕКЦИЯ О НАС (НОВАЯ) --- */
+.about-section {
+  width: 100%;
+  background: white; /* Белый фон для контраста */
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.about-container {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap; /* Чтобы на мобилке сворачивалось */
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid #eee;
+  padding-top: 2rem;
+}
+
+.stat-item span {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #d35400;
+}
+
+.stat-item p {
+  font-size: 0.9rem;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* --- КАТАЛОГ --- */
+.catalog-section {
+  width: 100%;
+  padding: 6rem 2rem;
+  background-color: #f4f4f4; /* Серый фон */
+}
+
+.catalog-section h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  color: #222;
+}
+
+.products-grid {
+  display: grid;
+  /* Адаптивная сетка: автозаполнение */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 25px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Эффект зума картинки при наведении */
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+.card-info {
+  padding: 1.5rem;
+  text-align: center;
+  background: white;
+  z-index: 1;
+}
+
+.card-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.price {
+  display: block;
+  font-weight: 700;
+  color: #d35400;
+  font-size: 1.3rem;
+}
+
+/* Форма обратной связи */
+.contact-section {
+  width: 100%;
+  background: #222;
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #333;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.contact-form button {
+  padding: 15px;
+  background-color: #f0a500;
+  color: black;
+  border: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+.contact-form button:hover {
+  background-color: #ffbe2e;
+}
+
+/* Футер */
+.footer {
+  width: 100%;
+  background: black;
+  color: #888;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+/* Модальное окно */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  max-height: 90vh;
+  border-radius: 12px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  flex-direction: row;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.modal-text {
+  padding: 3rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  overflow-y: auto; /* На случай длинного текста */
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+.modal-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.modal-price {
+  font-size: 1.8rem;
+  color: #d35400;
+  font-weight: bold;
+  margin: 1rem 0 1.5rem;
+}
+
+.modal-desc {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  color: #555;
+}
+
+.buy-btn {
+  width: 100%;
+  padding: 18px;
+  background: #222;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.buy-btn:hover {
+  background: #000;
+}
+
+/* Адаптив (Планшеты и Мобилки) */
+@media (max-width: 900px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .about-image {
+    order: -1; /* Картинка сверху на мобильных */
+  }
+
+  .modal-content {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  .modal-content img {
+    width: 100%;
+    height: 300px;
+  }
+
+  .modal-text {
+    width: 100%;
+    padding: 1.5rem;
+    height: auto;
+  }
+}
+
+/* ... Все ваши предыдущие стили ... */
+
+/* --- СТИЛИ ДЛЯ ОКНА БЫСТРОГО ЗАКАЗА --- */
+
+.order-modal-content {
+  background: white;
+  width: 90%;
+  max-width: 500px; /* Оно уже, чем карточка товара */
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.order-modal-content h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.order-modal-content p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.order-price {
+  font-size: 1.5rem !important;
+  color: #d35400 !important;
+  font-weight: bold;
+  margin-bottom: 2rem !important;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.order-form label {
+  font-size: 0.95rem;
+  color: #666;
+  text-align: left;
+}
+
+.order-form input {
+  padding: 15px;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  text-align: center;
+  transition: border-color 0.3s;
+}
+
+.order-form input:focus {
+  border-color: #d35400;
+  outline: none;
+}
+
+.confirm-btn {
+  padding: 18px;
+  background: #28a745; /* Зеленый цвет для действия */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.confirm-btn:hover {
+  background: #218838;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+.back-btn:hover {
+  color: #333;
+}
+
+/* Анимация появления окна */
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Добавьте это в конец файла App.css или к стилям секции About */
+
+.key-value-block {
+  background: #fff9e6; /* Легкий теплый оттенок */
+  border-left: 5px solid #f0a500; /* Фирменный оранжевый акцент */
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.key-value-block h3 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: #d35400;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.key-value-block p {
+  font-size: 1.2rem !important; /* Чуть крупнее обычного текста */
+  font-style: italic;
+  color: #333 !important;
+  line-height: 1.6;
+  margin: 0 !important;
+}
+
+.key-value-block strong {
+  color: #000;
+  font-weight: 700;
+}
