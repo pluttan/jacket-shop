@@ -454,7 +454,9 @@ const Label = ({ text }) => (
 const Footer = () => (
   <footer className="py-12 bg-black text-center border-t border-white/10">
     <div className="text-neon-lime font-black text-xl mb-4 italic">JACKET_SHOP</div>
-    <p className="text-zinc-600 text-[10px] uppercase tracking-[0.3em]">System Generated: 2025</p>
+    <p className="text-zinc-600 text-[10px] uppercase tracking-[0.3em]">8(900)556-56-90  |  jacket@shop.ex</p>
+    <p className="text-zinc-600 text-[10px] uppercase tracking-[0.3em]">ООО "Стильные куртки"</p>
+    <p className="text-zinc-600 text-[10px] uppercase tracking-[0.3em]">ИНН 7704407589</p>
   </footer>
 );
 
